@@ -1,0 +1,45 @@
+doctype html
+//- html
+    //- head
+    //-     title Natours | #{tour}
+    //-     //- <link rel="stylesheet" href="css/style.css">    in html.
+    //-     link(rel='stylesheet' href='css/style.css')
+    //-     link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+
+    //- body
+    //-     //- local variable. 
+    //-     h1= tour        
+    //-     //- can also write simple js code.
+    //-     h2= user.toUpperCase()
+        
+    //-     //- unbuffered Code
+    //-     - const x= 9
+    //-     //- buffered Code
+    //-     h2= 2 * x  
+    //-     // h1 The Park Camper     
+    //-     //- h1 The Park Camper       // origional comment.
+    //-     p This is just a text
+
+html
+    head 
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        title Natours | Exciting tours for adventurous people
+        link(rel='stylesheet' href='css/style.css')
+        link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+        link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Lato:300,300i,700")
+
+
+    body
+        // HEADER
+        include _header
+
+        // CONTENT
+        main.main 
+            h1= tour
+
+        // FOOTER
+        include _footer
+        
+
